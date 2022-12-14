@@ -131,20 +131,20 @@ impl SessionBuilder {
     }
 
     /// Set the session to use CPU
-    pub fn use_cpu(self, use_arena: i32) -> Result<SessionBuilder> {
-        unsafe {
-            sys::OrtSessionOptionsAppendExecutionProvider_CPU(self.session_options_ptr, use_arena);
-        }
-        Ok(self)
-    }
+    // pub fn use_cpu(self, use_arena: i32) -> Result<SessionBuilder> {
+    //     unsafe {
+    //         sys::OrtSessionOptionsAppendExecutionProvider_CPU(self.session_options_ptr, use_arena);
+    //     }
+    //     Ok(self)
+    // }
 
     /// Set the session to use cuda
-    pub fn use_cuda(self, device_id: i32) -> Result<SessionBuilder> {
-        unsafe {
-            sys::OrtSessionOptionsAppendExecutionProvider_CUDA(self.session_options_ptr, device_id);
-        }
-        Ok(self)
-    }
+    // pub fn use_cuda(self, device_id: i32) -> Result<SessionBuilder> {
+    //     unsafe {
+    //         sys::OrtSessionOptionsAppendExecutionProvider_CUDA(self.session_options_ptr, device_id);
+    //     }
+    //     Ok(self)
+    // }
 
     /// Set the session's allocator
     ///
